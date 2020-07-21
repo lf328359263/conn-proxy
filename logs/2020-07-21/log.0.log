@@ -1,0 +1,1055 @@
+2020-07-21 18:55:46.893 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd435aea2] REGISTERED
+2020-07-21 18:55:46.896 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd435aea2] BIND: 0.0.0.0/0.0.0.0:8088
+2020-07-21 18:55:46.900 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd435aea2, L:/0:0:0:0:0:0:0:0:8088] ACTIVE
+2020-07-21 18:55:46.900 INFO  com.tuyoo.bi.proxy.Server - complete 114.67.234.214:6379 -> 8088
+2020-07-21 18:56:21.138 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd435aea2, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0xbe6cb03c, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55456]
+2020-07-21 18:56:21.139 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd435aea2, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 18:56:21.140 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd435aea2, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0x929150ee, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55457]
+2020-07-21 18:56:21.140 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd435aea2, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 18:56:21.174 WARN  io.netty.channel.ChannelInitializer - Failed to initialize a channel. Closing: [id: 0xbe6cb03c, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55456]
+io.netty.channel.ChannelPipelineException: io.netty.handler.proxy.HttpProxyHandler.handlerAdded() has thrown an exception; removed.
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:624)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:223)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:381)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:370)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:57)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:51)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:46)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1463)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1115)
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:650)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:502)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:417)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:474)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at io.netty.util.NetUtil.getHostname(NetUtil.java:1125)
+	at io.netty.handler.codec.http.HttpUtil.formatHostnameForHttp(HttpUtil.java:524)
+	at io.netty.handler.proxy.HttpProxyHandler.newInitialMessage(HttpProxyHandler.java:158)
+	at io.netty.handler.proxy.ProxyHandler.sendInitialMessage(ProxyHandler.java:205)
+	at io.netty.handler.proxy.ProxyHandler.handlerAdded(ProxyHandler.java:146)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	... 23 common frames omitted
+2020-07-21 18:56:21.174 WARN  io.netty.channel.ChannelInitializer - Failed to initialize a channel. Closing: [id: 0x929150ee, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55457]
+io.netty.channel.ChannelPipelineException: io.netty.handler.proxy.HttpProxyHandler.handlerAdded() has thrown an exception; removed.
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:624)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:223)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:381)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:370)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:57)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:51)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:46)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1463)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1115)
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:650)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:502)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:417)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:474)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at io.netty.util.NetUtil.getHostname(NetUtil.java:1125)
+	at io.netty.handler.codec.http.HttpUtil.formatHostnameForHttp(HttpUtil.java:524)
+	at io.netty.handler.proxy.HttpProxyHandler.newInitialMessage(HttpProxyHandler.java:158)
+	at io.netty.handler.proxy.ProxyHandler.sendInitialMessage(ProxyHandler.java:205)
+	at io.netty.handler.proxy.ProxyHandler.handlerAdded(ProxyHandler.java:146)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	... 23 common frames omitted
+2020-07-21 18:56:21.178 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd435aea2, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0x38345014, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55461]
+2020-07-21 18:56:21.178 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd435aea2, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 18:56:21.179 WARN  io.netty.channel.ChannelInitializer - Failed to initialize a channel. Closing: [id: 0x38345014, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55461]
+io.netty.channel.ChannelPipelineException: io.netty.handler.proxy.HttpProxyHandler.handlerAdded() has thrown an exception; removed.
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:624)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:223)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:381)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:370)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:57)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:51)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:46)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1463)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1115)
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:650)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:502)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:417)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:474)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at io.netty.util.NetUtil.getHostname(NetUtil.java:1125)
+	at io.netty.handler.codec.http.HttpUtil.formatHostnameForHttp(HttpUtil.java:524)
+	at io.netty.handler.proxy.HttpProxyHandler.newInitialMessage(HttpProxyHandler.java:158)
+	at io.netty.handler.proxy.ProxyHandler.sendInitialMessage(ProxyHandler.java:205)
+	at io.netty.handler.proxy.ProxyHandler.handlerAdded(ProxyHandler.java:146)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	... 23 common frames omitted
+2020-07-21 18:56:21.303 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd435aea2, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0xac7bfdd3, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55464]
+2020-07-21 18:56:21.305 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd435aea2, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 18:56:21.306 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd435aea2, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0x599a8ad9, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55465]
+2020-07-21 18:56:21.306 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd435aea2, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 18:56:21.306 WARN  io.netty.channel.ChannelInitializer - Failed to initialize a channel. Closing: [id: 0xac7bfdd3, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55464]
+io.netty.channel.ChannelPipelineException: io.netty.handler.proxy.HttpProxyHandler.handlerAdded() has thrown an exception; removed.
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:624)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:223)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:381)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:370)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:57)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:51)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:46)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1463)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1115)
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:650)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:502)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:417)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:474)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at io.netty.util.NetUtil.getHostname(NetUtil.java:1125)
+	at io.netty.handler.codec.http.HttpUtil.formatHostnameForHttp(HttpUtil.java:524)
+	at io.netty.handler.proxy.HttpProxyHandler.newInitialMessage(HttpProxyHandler.java:158)
+	at io.netty.handler.proxy.ProxyHandler.sendInitialMessage(ProxyHandler.java:205)
+	at io.netty.handler.proxy.ProxyHandler.handlerAdded(ProxyHandler.java:146)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	... 23 common frames omitted
+2020-07-21 18:56:21.307 WARN  io.netty.channel.ChannelInitializer - Failed to initialize a channel. Closing: [id: 0x599a8ad9, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55465]
+io.netty.channel.ChannelPipelineException: io.netty.handler.proxy.HttpProxyHandler.handlerAdded() has thrown an exception; removed.
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:624)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:223)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:381)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:370)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:57)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:51)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:46)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1463)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1115)
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:650)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:502)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:417)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:474)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at io.netty.util.NetUtil.getHostname(NetUtil.java:1125)
+	at io.netty.handler.codec.http.HttpUtil.formatHostnameForHttp(HttpUtil.java:524)
+	at io.netty.handler.proxy.HttpProxyHandler.newInitialMessage(HttpProxyHandler.java:158)
+	at io.netty.handler.proxy.ProxyHandler.sendInitialMessage(ProxyHandler.java:205)
+	at io.netty.handler.proxy.ProxyHandler.handlerAdded(ProxyHandler.java:146)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	... 23 common frames omitted
+2020-07-21 18:56:21.308 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd435aea2, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0x943f520f, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55468]
+2020-07-21 18:56:21.308 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd435aea2, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 18:56:21.309 WARN  io.netty.channel.ChannelInitializer - Failed to initialize a channel. Closing: [id: 0x943f520f, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55468]
+io.netty.channel.ChannelPipelineException: io.netty.handler.proxy.HttpProxyHandler.handlerAdded() has thrown an exception; removed.
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:624)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:223)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:381)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:370)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:57)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:51)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:46)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1463)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1115)
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:650)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:502)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:417)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:474)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at io.netty.util.NetUtil.getHostname(NetUtil.java:1125)
+	at io.netty.handler.codec.http.HttpUtil.formatHostnameForHttp(HttpUtil.java:524)
+	at io.netty.handler.proxy.HttpProxyHandler.newInitialMessage(HttpProxyHandler.java:158)
+	at io.netty.handler.proxy.ProxyHandler.sendInitialMessage(ProxyHandler.java:205)
+	at io.netty.handler.proxy.ProxyHandler.handlerAdded(ProxyHandler.java:146)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	... 23 common frames omitted
+2020-07-21 18:56:26.327 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd435aea2, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0x5b7cb8ec, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55496]
+2020-07-21 18:56:26.328 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd435aea2, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 18:56:26.328 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd435aea2, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0xf384700f, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55497]
+2020-07-21 18:56:26.328 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd435aea2, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 18:56:26.329 WARN  io.netty.channel.ChannelInitializer - Failed to initialize a channel. Closing: [id: 0x5b7cb8ec, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55496]
+io.netty.channel.ChannelPipelineException: io.netty.handler.proxy.HttpProxyHandler.handlerAdded() has thrown an exception; removed.
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:624)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:223)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:381)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:370)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:57)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:51)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:46)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1463)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1115)
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:650)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:502)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:417)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:474)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at io.netty.util.NetUtil.getHostname(NetUtil.java:1125)
+	at io.netty.handler.codec.http.HttpUtil.formatHostnameForHttp(HttpUtil.java:524)
+	at io.netty.handler.proxy.HttpProxyHandler.newInitialMessage(HttpProxyHandler.java:158)
+	at io.netty.handler.proxy.ProxyHandler.sendInitialMessage(ProxyHandler.java:205)
+	at io.netty.handler.proxy.ProxyHandler.handlerAdded(ProxyHandler.java:146)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	... 23 common frames omitted
+2020-07-21 18:56:26.329 WARN  io.netty.channel.ChannelInitializer - Failed to initialize a channel. Closing: [id: 0xf384700f, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55497]
+io.netty.channel.ChannelPipelineException: io.netty.handler.proxy.HttpProxyHandler.handlerAdded() has thrown an exception; removed.
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:624)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:223)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:381)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:370)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:57)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:51)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:46)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1463)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1115)
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:650)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:502)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:417)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:474)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at io.netty.util.NetUtil.getHostname(NetUtil.java:1125)
+	at io.netty.handler.codec.http.HttpUtil.formatHostnameForHttp(HttpUtil.java:524)
+	at io.netty.handler.proxy.HttpProxyHandler.newInitialMessage(HttpProxyHandler.java:158)
+	at io.netty.handler.proxy.ProxyHandler.sendInitialMessage(ProxyHandler.java:205)
+	at io.netty.handler.proxy.ProxyHandler.handlerAdded(ProxyHandler.java:146)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	... 23 common frames omitted
+2020-07-21 18:56:26.333 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd435aea2, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0x87c08506, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55500]
+2020-07-21 18:56:26.333 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd435aea2, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 18:56:26.336 WARN  io.netty.channel.ChannelInitializer - Failed to initialize a channel. Closing: [id: 0x87c08506, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55500]
+io.netty.channel.ChannelPipelineException: io.netty.handler.proxy.HttpProxyHandler.handlerAdded() has thrown an exception; removed.
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:624)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:223)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:381)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:370)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:57)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:51)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:46)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1463)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1115)
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:650)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:502)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:417)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:474)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at io.netty.util.NetUtil.getHostname(NetUtil.java:1125)
+	at io.netty.handler.codec.http.HttpUtil.formatHostnameForHttp(HttpUtil.java:524)
+	at io.netty.handler.proxy.HttpProxyHandler.newInitialMessage(HttpProxyHandler.java:158)
+	at io.netty.handler.proxy.ProxyHandler.sendInitialMessage(ProxyHandler.java:205)
+	at io.netty.handler.proxy.ProxyHandler.handlerAdded(ProxyHandler.java:146)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	... 23 common frames omitted
+2020-07-21 18:56:31.179 WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.proxy.ProxyConnectException: http, none, 10.8.28.45:8080 => null, timeout
+	at io.netty.handler.proxy.ProxyHandler$2.run(ProxyHandler.java:199)
+	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:170)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-21 18:56:31.179 WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.proxy.ProxyConnectException: http, none, 10.8.28.45:8080 => null, timeout
+	at io.netty.handler.proxy.ProxyHandler$2.run(ProxyHandler.java:199)
+	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:170)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-21 18:56:31.185 WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.proxy.ProxyConnectException: http, none, 10.8.28.45:8080 => null, timeout
+	at io.netty.handler.proxy.ProxyHandler$2.run(ProxyHandler.java:199)
+	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:170)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-21 18:56:31.311 WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.proxy.ProxyConnectException: http, none, 10.8.28.45:8080 => null, timeout
+	at io.netty.handler.proxy.ProxyHandler$2.run(ProxyHandler.java:199)
+	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:170)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-21 18:56:31.311 WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.proxy.ProxyConnectException: http, none, 10.8.28.45:8080 => null, timeout
+	at io.netty.handler.proxy.ProxyHandler$2.run(ProxyHandler.java:199)
+	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:170)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-21 18:56:31.311 WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.proxy.ProxyConnectException: http, none, 10.8.28.45:8080 => null, timeout
+	at io.netty.handler.proxy.ProxyHandler$2.run(ProxyHandler.java:199)
+	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:170)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-21 18:56:36.332 WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.proxy.ProxyConnectException: http, none, 10.8.28.45:8080 => null, timeout
+	at io.netty.handler.proxy.ProxyHandler$2.run(ProxyHandler.java:199)
+	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:170)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-21 18:56:36.332 WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.proxy.ProxyConnectException: http, none, 10.8.28.45:8080 => null, timeout
+	at io.netty.handler.proxy.ProxyHandler$2.run(ProxyHandler.java:199)
+	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:170)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-21 18:56:36.337 WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.proxy.ProxyConnectException: http, none, 10.8.28.45:8080 => null, timeout
+	at io.netty.handler.proxy.ProxyHandler$2.run(ProxyHandler.java:199)
+	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:170)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-21 18:56:56.358 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd435aea2, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0xda1649e7, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55683]
+2020-07-21 18:56:56.358 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd435aea2, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 18:56:56.359 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd435aea2, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0x068f1291, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55684]
+2020-07-21 18:56:56.359 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd435aea2, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 18:56:56.359 WARN  io.netty.channel.ChannelInitializer - Failed to initialize a channel. Closing: [id: 0xda1649e7, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55683]
+io.netty.channel.ChannelPipelineException: io.netty.handler.proxy.HttpProxyHandler.handlerAdded() has thrown an exception; removed.
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:624)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:223)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:381)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:370)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:57)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:51)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:46)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1463)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1115)
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:650)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:502)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:417)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:474)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at io.netty.util.NetUtil.getHostname(NetUtil.java:1125)
+	at io.netty.handler.codec.http.HttpUtil.formatHostnameForHttp(HttpUtil.java:524)
+	at io.netty.handler.proxy.HttpProxyHandler.newInitialMessage(HttpProxyHandler.java:158)
+	at io.netty.handler.proxy.ProxyHandler.sendInitialMessage(ProxyHandler.java:205)
+	at io.netty.handler.proxy.ProxyHandler.handlerAdded(ProxyHandler.java:146)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	... 23 common frames omitted
+2020-07-21 18:56:56.360 WARN  io.netty.channel.ChannelInitializer - Failed to initialize a channel. Closing: [id: 0x068f1291, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55684]
+io.netty.channel.ChannelPipelineException: io.netty.handler.proxy.HttpProxyHandler.handlerAdded() has thrown an exception; removed.
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:624)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:223)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:381)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:370)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:57)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:51)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:46)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1463)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1115)
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:650)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:502)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:417)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:474)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at io.netty.util.NetUtil.getHostname(NetUtil.java:1125)
+	at io.netty.handler.codec.http.HttpUtil.formatHostnameForHttp(HttpUtil.java:524)
+	at io.netty.handler.proxy.HttpProxyHandler.newInitialMessage(HttpProxyHandler.java:158)
+	at io.netty.handler.proxy.ProxyHandler.sendInitialMessage(ProxyHandler.java:205)
+	at io.netty.handler.proxy.ProxyHandler.handlerAdded(ProxyHandler.java:146)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	... 23 common frames omitted
+2020-07-21 18:56:56.364 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd435aea2, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0xbaaaba42, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55687]
+2020-07-21 18:56:56.364 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd435aea2, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 18:56:56.365 WARN  io.netty.channel.ChannelInitializer - Failed to initialize a channel. Closing: [id: 0xbaaaba42, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55687]
+io.netty.channel.ChannelPipelineException: io.netty.handler.proxy.HttpProxyHandler.handlerAdded() has thrown an exception; removed.
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:624)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:223)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:381)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:370)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:57)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:51)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:46)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1463)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1115)
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:650)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:502)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:417)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:474)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at io.netty.util.NetUtil.getHostname(NetUtil.java:1125)
+	at io.netty.handler.codec.http.HttpUtil.formatHostnameForHttp(HttpUtil.java:524)
+	at io.netty.handler.proxy.HttpProxyHandler.newInitialMessage(HttpProxyHandler.java:158)
+	at io.netty.handler.proxy.ProxyHandler.sendInitialMessage(ProxyHandler.java:205)
+	at io.netty.handler.proxy.ProxyHandler.handlerAdded(ProxyHandler.java:146)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	... 23 common frames omitted
+2020-07-21 18:57:06.364 WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.proxy.ProxyConnectException: http, none, 10.8.28.45:8080 => null, timeout
+	at io.netty.handler.proxy.ProxyHandler$2.run(ProxyHandler.java:199)
+	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:170)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-21 18:57:06.364 WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.proxy.ProxyConnectException: http, none, 10.8.28.45:8080 => null, timeout
+	at io.netty.handler.proxy.ProxyHandler$2.run(ProxyHandler.java:199)
+	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:170)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-21 18:57:06.370 WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.proxy.ProxyConnectException: http, none, 10.8.28.45:8080 => null, timeout
+	at io.netty.handler.proxy.ProxyHandler$2.run(ProxyHandler.java:199)
+	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:170)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-21 18:57:18.830 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x3f649fdd] REGISTERED
+2020-07-21 18:57:18.833 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x3f649fdd] BIND: 0.0.0.0/0.0.0.0:8088
+2020-07-21 18:57:18.838 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x3f649fdd, L:/0:0:0:0:0:0:0:0:8088] ACTIVE
+2020-07-21 18:57:18.837 INFO  com.tuyoo.bi.proxy.Server - complete 114.67.234.214:6379 -> 8088
+2020-07-21 18:57:22.696 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x3f649fdd, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0x71715436, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55958]
+2020-07-21 18:57:22.697 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x3f649fdd, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 18:57:22.697 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x3f649fdd, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0x609d66a4, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55959]
+2020-07-21 18:57:22.697 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x3f649fdd, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 18:57:22.726 WARN  io.netty.channel.ChannelInitializer - Failed to initialize a channel. Closing: [id: 0x609d66a4, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55959]
+io.netty.channel.ChannelPipelineException: io.netty.handler.proxy.HttpProxyHandler.handlerAdded() has thrown an exception; removed.
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:624)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:223)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:381)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:370)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:57)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:51)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:46)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1463)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1115)
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:650)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:502)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:417)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:474)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at io.netty.util.NetUtil.getHostname(NetUtil.java:1125)
+	at io.netty.handler.codec.http.HttpUtil.formatHostnameForHttp(HttpUtil.java:524)
+	at io.netty.handler.proxy.HttpProxyHandler.newInitialMessage(HttpProxyHandler.java:158)
+	at io.netty.handler.proxy.ProxyHandler.sendInitialMessage(ProxyHandler.java:205)
+	at io.netty.handler.proxy.ProxyHandler.handlerAdded(ProxyHandler.java:146)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	... 23 common frames omitted
+2020-07-21 18:57:22.726 WARN  io.netty.channel.ChannelInitializer - Failed to initialize a channel. Closing: [id: 0x71715436, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55958]
+io.netty.channel.ChannelPipelineException: io.netty.handler.proxy.HttpProxyHandler.handlerAdded() has thrown an exception; removed.
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:624)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:223)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:381)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:370)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:57)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:51)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:46)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1463)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1115)
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:650)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:502)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:417)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:474)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at io.netty.util.NetUtil.getHostname(NetUtil.java:1125)
+	at io.netty.handler.codec.http.HttpUtil.formatHostnameForHttp(HttpUtil.java:524)
+	at io.netty.handler.proxy.HttpProxyHandler.newInitialMessage(HttpProxyHandler.java:158)
+	at io.netty.handler.proxy.ProxyHandler.sendInitialMessage(ProxyHandler.java:205)
+	at io.netty.handler.proxy.ProxyHandler.handlerAdded(ProxyHandler.java:146)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	... 23 common frames omitted
+2020-07-21 18:57:22.729 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x3f649fdd, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0x718d868e, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55963]
+2020-07-21 18:57:22.729 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x3f649fdd, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 18:57:22.730 WARN  io.netty.channel.ChannelInitializer - Failed to initialize a channel. Closing: [id: 0x718d868e, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:55963]
+io.netty.channel.ChannelPipelineException: io.netty.handler.proxy.HttpProxyHandler.handlerAdded() has thrown an exception; removed.
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:624)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:223)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:381)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:370)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:57)
+	at com.tuyoo.bi.proxy.Server$1.initChannel(Server.java:51)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:46)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1463)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1115)
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:650)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:502)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:417)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:474)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at io.netty.util.NetUtil.getHostname(NetUtil.java:1125)
+	at io.netty.handler.codec.http.HttpUtil.formatHostnameForHttp(HttpUtil.java:524)
+	at io.netty.handler.proxy.HttpProxyHandler.newInitialMessage(HttpProxyHandler.java:158)
+	at io.netty.handler.proxy.ProxyHandler.sendInitialMessage(ProxyHandler.java:205)
+	at io.netty.handler.proxy.ProxyHandler.handlerAdded(ProxyHandler.java:146)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	... 23 common frames omitted
+2020-07-21 18:57:32.729 WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.proxy.ProxyConnectException: http, none, nn45.ywdier.com:8080 => null, timeout
+	at io.netty.handler.proxy.ProxyHandler$2.run(ProxyHandler.java:199)
+	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:170)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-21 18:57:32.729 WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.proxy.ProxyConnectException: http, none, nn45.ywdier.com:8080 => null, timeout
+	at io.netty.handler.proxy.ProxyHandler$2.run(ProxyHandler.java:199)
+	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:170)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-21 18:57:32.734 WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.proxy.ProxyConnectException: http, none, nn45.ywdier.com:8080 => null, timeout
+	at io.netty.handler.proxy.ProxyHandler$2.run(ProxyHandler.java:199)
+	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:170)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-21 18:58:50.156 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x18fb34d1] REGISTERED
+2020-07-21 18:58:50.158 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x18fb34d1] BIND: 0.0.0.0/0.0.0.0:8088
+2020-07-21 18:58:50.162 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x18fb34d1, L:/0:0:0:0:0:0:0:0:8088] ACTIVE
+2020-07-21 18:58:50.161 INFO  com.tuyoo.bi.proxy.Server - complete 10.8.28.45:8080 -> 8088
+2020-07-21 18:58:55.656 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x18fb34d1, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0xb1d3e2bf, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:56537]
+2020-07-21 18:58:55.657 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x18fb34d1, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 18:58:55.658 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x18fb34d1, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0x36ae69de, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:56538]
+2020-07-21 18:58:55.658 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x18fb34d1, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 18:58:55.663 INFO  com.tuyoo.bi.proxy.handler.LimitHandler - 新增连接，当前连接数：2 
+2020-07-21 18:58:55.663 INFO  com.tuyoo.bi.proxy.handler.LimitHandler - 新增连接，当前连接数：2 
+2020-07-21 18:58:55.682 INFO  com.tuyoo.bi.proxy.handler.ForwardProxyHandler - create connection [10.8.28.45:8080] ...
+2020-07-21 18:58:55.695 INFO  com.tuyoo.bi.proxy.handler.ForwardProxyHandler - client conn first ... 
+2020-07-21 18:58:55.749 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x18fb34d1, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0x84d94538, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:56542]
+2020-07-21 18:58:55.749 INFO  com.tuyoo.bi.proxy.handler.ForwardProxyHandler - create connection [10.8.28.45:8080] ...
+2020-07-21 18:58:55.751 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x18fb34d1, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 18:58:55.751 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x18fb34d1, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0x0a18f50c, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:56543]
+2020-07-21 18:58:55.752 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x18fb34d1, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 18:58:55.753 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x18fb34d1, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0xdadd1e70, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:56545]
+2020-07-21 18:58:55.753 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x18fb34d1, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 18:58:55.754 WARN  com.tuyoo.bi.proxy.handler.LimitHandler - 连接已达到上限： 2 / 2
+2020-07-21 18:58:55.754 WARN  com.tuyoo.bi.proxy.handler.LimitHandler - 连接已达到上限： 3 / 2
+2020-07-21 18:58:55.754 INFO  com.tuyoo.bi.proxy.handler.LimitHandler - 连接关闭，当前连接数：4 
+2020-07-21 18:58:55.754 WARN  com.tuyoo.bi.proxy.handler.LimitHandler - 连接已达到上限： 4 / 2
+2020-07-21 18:58:55.754 INFO  com.tuyoo.bi.proxy.handler.LimitHandler - 连接关闭，当前连接数：3 
+2020-07-21 18:58:55.754 INFO  com.tuyoo.bi.proxy.handler.LimitHandler - 连接关闭，当前连接数：2 
+2020-07-21 18:58:55.757 WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.lang.NullPointerException: null
+	at com.tuyoo.bi.proxy.handler.ForwardProxyHandler.channelInactive(ForwardProxyHandler.java:73)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:262)
+	at io.netty.channel.AbstractChannelHandlerContext.access$300(AbstractChannelHandlerContext.java:61)
+	at io.netty.channel.AbstractChannelHandlerContext$4.run(AbstractChannelHandlerContext.java:253)
+	at io.netty.util.concurrent.UnorderedThreadPoolEventExecutor$NonNotifyRunnable.run(UnorderedThreadPoolEventExecutor.java:277)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-21 18:58:55.757 WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.lang.NullPointerException: null
+	at com.tuyoo.bi.proxy.handler.ForwardProxyHandler.channelInactive(ForwardProxyHandler.java:73)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:262)
+	at io.netty.channel.AbstractChannelHandlerContext.access$300(AbstractChannelHandlerContext.java:61)
+	at io.netty.channel.AbstractChannelHandlerContext$4.run(AbstractChannelHandlerContext.java:253)
+	at io.netty.util.concurrent.UnorderedThreadPoolEventExecutor$NonNotifyRunnable.run(UnorderedThreadPoolEventExecutor.java:277)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-21 18:58:55.757 WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.lang.NullPointerException: null
+	at com.tuyoo.bi.proxy.handler.ForwardProxyHandler.channelInactive(ForwardProxyHandler.java:73)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:262)
+	at io.netty.channel.AbstractChannelHandlerContext.access$300(AbstractChannelHandlerContext.java:61)
+	at io.netty.channel.AbstractChannelHandlerContext$4.run(AbstractChannelHandlerContext.java:253)
+	at io.netty.util.concurrent.UnorderedThreadPoolEventExecutor$NonNotifyRunnable.run(UnorderedThreadPoolEventExecutor.java:277)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-21 18:58:55.773 INFO  com.tuyoo.bi.proxy.handler.ForwardProxyHandler - client conn first ... 
+2020-07-21 18:58:55.789 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x18fb34d1, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0x671d1965, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:56546]
+2020-07-21 18:58:55.789 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x18fb34d1, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 18:58:55.790 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x18fb34d1, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0x4b01371d, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:56547]
+2020-07-21 18:58:55.790 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x18fb34d1, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 18:58:55.790 WARN  com.tuyoo.bi.proxy.handler.LimitHandler - 连接已达到上限： 2 / 2
+2020-07-21 18:58:55.790 INFO  com.tuyoo.bi.proxy.handler.LimitHandler - 连接关闭，当前连接数：2 
+2020-07-21 18:58:55.790 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x18fb34d1, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0x202b62f0, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:56548]
+2020-07-21 18:58:55.791 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x18fb34d1, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 18:58:55.791 WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.lang.NullPointerException: null
+	at com.tuyoo.bi.proxy.handler.ForwardProxyHandler.channelInactive(ForwardProxyHandler.java:73)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:262)
+	at io.netty.channel.AbstractChannelHandlerContext.access$300(AbstractChannelHandlerContext.java:61)
+	at io.netty.channel.AbstractChannelHandlerContext$4.run(AbstractChannelHandlerContext.java:253)
+	at io.netty.util.concurrent.UnorderedThreadPoolEventExecutor$NonNotifyRunnable.run(UnorderedThreadPoolEventExecutor.java:277)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-21 18:58:55.791 WARN  com.tuyoo.bi.proxy.handler.LimitHandler - 连接已达到上限： 2 / 2
+2020-07-21 18:58:55.791 INFO  com.tuyoo.bi.proxy.handler.LimitHandler - 连接关闭，当前连接数：2 
+2020-07-21 18:58:55.792 WARN  com.tuyoo.bi.proxy.handler.LimitHandler - 连接已达到上限： 2 / 2
+2020-07-21 18:58:55.792 WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.lang.NullPointerException: null
+	at com.tuyoo.bi.proxy.handler.ForwardProxyHandler.channelInactive(ForwardProxyHandler.java:73)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:262)
+	at io.netty.channel.AbstractChannelHandlerContext.access$300(AbstractChannelHandlerContext.java:61)
+	at io.netty.channel.AbstractChannelHandlerContext$4.run(AbstractChannelHandlerContext.java:253)
+	at io.netty.util.concurrent.UnorderedThreadPoolEventExecutor$NonNotifyRunnable.run(UnorderedThreadPoolEventExecutor.java:277)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-21 18:58:55.792 INFO  com.tuyoo.bi.proxy.handler.LimitHandler - 连接关闭，当前连接数：2 
+2020-07-21 18:58:55.792 WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.lang.NullPointerException: null
+	at com.tuyoo.bi.proxy.handler.ForwardProxyHandler.channelInactive(ForwardProxyHandler.java:73)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:262)
+	at io.netty.channel.AbstractChannelHandlerContext.access$300(AbstractChannelHandlerContext.java:61)
+	at io.netty.channel.AbstractChannelHandlerContext$4.run(AbstractChannelHandlerContext.java:253)
+	at io.netty.util.concurrent.UnorderedThreadPoolEventExecutor$NonNotifyRunnable.run(UnorderedThreadPoolEventExecutor.java:277)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-21 18:58:58.955 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x18fb34d1, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0x92058454, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:56561]
+2020-07-21 18:58:58.955 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x18fb34d1, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 18:58:58.956 WARN  com.tuyoo.bi.proxy.handler.LimitHandler - 连接已达到上限： 2 / 2
+2020-07-21 18:58:58.956 INFO  com.tuyoo.bi.proxy.handler.LimitHandler - 连接关闭，当前连接数：2 
+2020-07-21 18:58:58.956 WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.lang.NullPointerException: null
+	at com.tuyoo.bi.proxy.handler.ForwardProxyHandler.channelInactive(ForwardProxyHandler.java:73)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:262)
+	at io.netty.channel.AbstractChannelHandlerContext.access$300(AbstractChannelHandlerContext.java:61)
+	at io.netty.channel.AbstractChannelHandlerContext$4.run(AbstractChannelHandlerContext.java:253)
+	at io.netty.util.concurrent.UnorderedThreadPoolEventExecutor$NonNotifyRunnable.run(UnorderedThreadPoolEventExecutor.java:277)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-21 18:59:00.668 INFO  com.tuyoo.bi.proxy.handler.LimitHandler - 连接关闭，当前连接数：0 
+2020-07-21 18:59:00.668 INFO  com.tuyoo.bi.proxy.handler.LimitHandler - 连接关闭，当前连接数：1 
+2020-07-21 18:59:00.669 INFO  com.tuyoo.bi.proxy.handler.ForwardProxyHandler - close client channel ... 
+2020-07-21 18:59:00.669 INFO  com.tuyoo.bi.proxy.handler.ForwardProxyHandler - close client channel ... 
+2020-07-21 18:59:15.297 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x18fb34d1, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0x4e029948, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:56656]
+2020-07-21 18:59:15.297 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x18fb34d1, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 18:59:15.297 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x18fb34d1, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0x8382d746, L:/0:0:0:0:0:0:0:1:8088 - R:/0:0:0:0:0:0:0:1:56657]
+2020-07-21 18:59:15.298 INFO  io.netty.handler.logging.LoggingHandler - [id: 0x18fb34d1, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 18:59:15.298 INFO  com.tuyoo.bi.proxy.handler.LimitHandler - 新增连接，当前连接数：1 
+2020-07-21 18:59:15.298 INFO  com.tuyoo.bi.proxy.handler.LimitHandler - 新增连接，当前连接数：2 
+2020-07-21 18:59:15.301 INFO  com.tuyoo.bi.proxy.handler.ForwardProxyHandler - create connection [10.8.28.45:8080] ...
+2020-07-21 18:59:15.319 INFO  com.tuyoo.bi.proxy.handler.ForwardProxyHandler - client conn first ... 
+2020-07-21 18:59:15.362 INFO  com.tuyoo.bi.proxy.handler.ForwardProxyHandler - create connection [10.8.28.45:8080] ...
+2020-07-21 18:59:15.369 INFO  com.tuyoo.bi.proxy.handler.ForwardProxyHandler - client conn first ... 
+2020-07-21 18:59:20.299 INFO  com.tuyoo.bi.proxy.handler.LimitHandler - 连接关闭，当前连接数：1 
+2020-07-21 18:59:20.300 INFO  com.tuyoo.bi.proxy.handler.ForwardProxyHandler - close client channel ... 
+2020-07-21 18:59:20.303 INFO  com.tuyoo.bi.proxy.handler.LimitHandler - 连接关闭，当前连接数：0 
+2020-07-21 18:59:20.304 INFO  com.tuyoo.bi.proxy.handler.ForwardProxyHandler - close client channel ... 
+2020-07-21 18:59:36.150 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd7cebd87] REGISTERED
+2020-07-21 18:59:36.153 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd7cebd87] BIND: 0.0.0.0/0.0.0.0:8088
+2020-07-21 18:59:36.157 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd7cebd87, L:/0:0:0:0:0:0:0:0:8088] ACTIVE
+2020-07-21 18:59:36.156 INFO  com.tuyoo.bi.proxy.Server - complete 10.8.28.45:8080 -> 8088
+2020-07-21 19:00:03.676 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd7cebd87, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0x34fb4acf, L:/172.16.8.154:8088 - R:/172.16.8.155:59581]
+2020-07-21 19:00:03.677 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd7cebd87, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 19:00:03.677 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd7cebd87, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0xe9e182e6, L:/172.16.8.154:8088 - R:/172.16.8.155:59582]
+2020-07-21 19:00:03.678 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd7cebd87, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 19:00:03.683 INFO  com.tuyoo.bi.proxy.handler.LimitHandler - 新增连接，当前连接数：2 
+2020-07-21 19:00:03.683 INFO  com.tuyoo.bi.proxy.handler.LimitHandler - 新增连接，当前连接数：2 
+2020-07-21 19:00:03.700 INFO  com.tuyoo.bi.proxy.handler.ForwardProxyHandler - create connection [10.8.28.45:8080] ...
+2020-07-21 19:00:03.722 INFO  com.tuyoo.bi.proxy.handler.ForwardProxyHandler - client conn first ... 
+2020-07-21 19:00:03.758 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd7cebd87, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0xe54cf4f6, L:/172.16.8.154:8088 - R:/172.16.8.155:59583]
+2020-07-21 19:00:03.759 INFO  com.tuyoo.bi.proxy.handler.ForwardProxyHandler - create connection [10.8.28.45:8080] ...
+2020-07-21 19:00:03.759 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd7cebd87, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 19:00:03.761 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd7cebd87, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0x10624a68, L:/172.16.8.154:8088 - R:/172.16.8.155:59584]
+2020-07-21 19:00:03.762 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd7cebd87, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 19:00:03.762 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd7cebd87, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0xabe4e6bf, L:/172.16.8.154:8088 - R:/172.16.8.155:59585]
+2020-07-21 19:00:03.762 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd7cebd87, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 19:00:03.763 WARN  com.tuyoo.bi.proxy.handler.LimitHandler - 连接已达到上限： 3 / 2
+2020-07-21 19:00:03.763 WARN  com.tuyoo.bi.proxy.handler.LimitHandler - 连接已达到上限： 2 / 2
+2020-07-21 19:00:03.764 WARN  com.tuyoo.bi.proxy.handler.LimitHandler - 连接已达到上限： 4 / 2
+2020-07-21 19:00:03.764 INFO  com.tuyoo.bi.proxy.handler.LimitHandler - 连接关闭，当前连接数：4 
+2020-07-21 19:00:03.764 INFO  com.tuyoo.bi.proxy.handler.LimitHandler - 连接关闭，当前连接数：2 
+2020-07-21 19:00:03.764 INFO  com.tuyoo.bi.proxy.handler.LimitHandler - 连接关闭，当前连接数：3 
+2020-07-21 19:00:03.767 WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.lang.NullPointerException: null
+	at com.tuyoo.bi.proxy.handler.ForwardProxyHandler.channelInactive(ForwardProxyHandler.java:73)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:262)
+	at io.netty.channel.AbstractChannelHandlerContext.access$300(AbstractChannelHandlerContext.java:61)
+	at io.netty.channel.AbstractChannelHandlerContext$4.run(AbstractChannelHandlerContext.java:253)
+	at io.netty.util.concurrent.UnorderedThreadPoolEventExecutor$NonNotifyRunnable.run(UnorderedThreadPoolEventExecutor.java:277)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-21 19:00:03.767 WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.lang.NullPointerException: null
+	at com.tuyoo.bi.proxy.handler.ForwardProxyHandler.channelInactive(ForwardProxyHandler.java:73)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:262)
+	at io.netty.channel.AbstractChannelHandlerContext.access$300(AbstractChannelHandlerContext.java:61)
+	at io.netty.channel.AbstractChannelHandlerContext$4.run(AbstractChannelHandlerContext.java:253)
+	at io.netty.util.concurrent.UnorderedThreadPoolEventExecutor$NonNotifyRunnable.run(UnorderedThreadPoolEventExecutor.java:277)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-21 19:00:03.767 WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.lang.NullPointerException: null
+	at com.tuyoo.bi.proxy.handler.ForwardProxyHandler.channelInactive(ForwardProxyHandler.java:73)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:262)
+	at io.netty.channel.AbstractChannelHandlerContext.access$300(AbstractChannelHandlerContext.java:61)
+	at io.netty.channel.AbstractChannelHandlerContext$4.run(AbstractChannelHandlerContext.java:253)
+	at io.netty.util.concurrent.UnorderedThreadPoolEventExecutor$NonNotifyRunnable.run(UnorderedThreadPoolEventExecutor.java:277)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-21 19:00:03.770 INFO  com.tuyoo.bi.proxy.handler.ForwardProxyHandler - client conn first ... 
+2020-07-21 19:00:03.790 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd7cebd87, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0xb39a2fff, L:/172.16.8.154:8088 - R:/172.16.8.155:59586]
+2020-07-21 19:00:03.790 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd7cebd87, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 19:00:03.791 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd7cebd87, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0xaf67b237, L:/172.16.8.154:8088 - R:/172.16.8.155:59587]
+2020-07-21 19:00:03.791 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd7cebd87, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 19:00:03.792 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd7cebd87, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0xdc2a008c, L:/172.16.8.154:8088 - R:/172.16.8.155:59588]
+2020-07-21 19:00:03.792 WARN  com.tuyoo.bi.proxy.handler.LimitHandler - 连接已达到上限： 2 / 2
+2020-07-21 19:00:03.792 INFO  com.tuyoo.bi.proxy.handler.LimitHandler - 连接关闭，当前连接数：2 
+2020-07-21 19:00:03.792 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd7cebd87, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 19:00:03.793 WARN  com.tuyoo.bi.proxy.handler.LimitHandler - 连接已达到上限： 2 / 2
+2020-07-21 19:00:03.793 WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.lang.NullPointerException: null
+	at com.tuyoo.bi.proxy.handler.ForwardProxyHandler.channelInactive(ForwardProxyHandler.java:73)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:262)
+	at io.netty.channel.AbstractChannelHandlerContext.access$300(AbstractChannelHandlerContext.java:61)
+	at io.netty.channel.AbstractChannelHandlerContext$4.run(AbstractChannelHandlerContext.java:253)
+	at io.netty.util.concurrent.UnorderedThreadPoolEventExecutor$NonNotifyRunnable.run(UnorderedThreadPoolEventExecutor.java:277)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-21 19:00:03.793 INFO  com.tuyoo.bi.proxy.handler.LimitHandler - 连接关闭，当前连接数：2 
+2020-07-21 19:00:03.794 WARN  com.tuyoo.bi.proxy.handler.LimitHandler - 连接已达到上限： 2 / 2
+2020-07-21 19:00:03.794 WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.lang.NullPointerException: null
+	at com.tuyoo.bi.proxy.handler.ForwardProxyHandler.channelInactive(ForwardProxyHandler.java:73)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:262)
+	at io.netty.channel.AbstractChannelHandlerContext.access$300(AbstractChannelHandlerContext.java:61)
+	at io.netty.channel.AbstractChannelHandlerContext$4.run(AbstractChannelHandlerContext.java:253)
+	at io.netty.util.concurrent.UnorderedThreadPoolEventExecutor$NonNotifyRunnable.run(UnorderedThreadPoolEventExecutor.java:277)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-21 19:00:03.794 INFO  com.tuyoo.bi.proxy.handler.LimitHandler - 连接关闭，当前连接数：2 
+2020-07-21 19:00:03.794 WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.lang.NullPointerException: null
+	at com.tuyoo.bi.proxy.handler.ForwardProxyHandler.channelInactive(ForwardProxyHandler.java:73)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:262)
+	at io.netty.channel.AbstractChannelHandlerContext.access$300(AbstractChannelHandlerContext.java:61)
+	at io.netty.channel.AbstractChannelHandlerContext$4.run(AbstractChannelHandlerContext.java:253)
+	at io.netty.util.concurrent.UnorderedThreadPoolEventExecutor$NonNotifyRunnable.run(UnorderedThreadPoolEventExecutor.java:277)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-21 19:00:08.732 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd7cebd87, L:/0:0:0:0:0:0:0:0:8088] READ: [id: 0x665396db, L:/172.16.8.154:8088 - R:/172.16.8.155:59601]
+2020-07-21 19:00:08.733 INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd7cebd87, L:/0:0:0:0:0:0:0:0:8088] READ COMPLETE
+2020-07-21 19:00:08.734 WARN  com.tuyoo.bi.proxy.handler.LimitHandler - 连接已达到上限： 2 / 2
+2020-07-21 19:00:08.735 INFO  com.tuyoo.bi.proxy.handler.LimitHandler - 连接关闭，当前连接数：2 
+2020-07-21 19:00:08.735 WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.lang.NullPointerException: null
+	at com.tuyoo.bi.proxy.handler.ForwardProxyHandler.channelInactive(ForwardProxyHandler.java:73)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:262)
+	at io.netty.channel.AbstractChannelHandlerContext.access$300(AbstractChannelHandlerContext.java:61)
+	at io.netty.channel.AbstractChannelHandlerContext$4.run(AbstractChannelHandlerContext.java:253)
+	at io.netty.util.concurrent.UnorderedThreadPoolEventExecutor$NonNotifyRunnable.run(UnorderedThreadPoolEventExecutor.java:277)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
